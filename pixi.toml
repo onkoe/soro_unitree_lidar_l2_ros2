@@ -1,0 +1,88 @@
+[workspace]
+name = "soro_unitree_lidar_l2_ros2"
+authors = ["Barrett <contact@barretts.club>"]
+channels = ["conda-forge", "robostack-jazzy"]
+platforms = ["linux-aarch64", "linux-64", "osx-arm64", "osx-64"]
+version = "0.1.0"
+
+
+[tasks]
+
+[dependencies]
+
+# build tools (e.g., c compiler, rust, glibc)
+c-compiler = { channel = "conda-forge" }
+clang = { channel = "conda-forge" }
+clangxx = { channel = "conda-forge" }
+cxx-compiler = { channel = "conda-forge" }
+glib = { version = ">=2.80.2,<3", channel = "conda-forge" }
+make = { version = "==4.4.1", channel = "conda-forge" }
+
+# ros 2 tooling (e.g., colcon, ros2-cli)
+colcon-core = { channel = "conda-forge" }
+colcon-cmake = { channel = "conda-forge" }
+colcon-common-extensions = { channel = "conda-forge" }
+colcon-mixin = { channel = "conda-forge" }
+colcon-ros = { channel = "conda-forge" }
+colcon-test-result = { channel = "conda-forge" }
+ros-jazzy-cyclonedds = { channel = "robostack-jazzy" }
+ros-jazzy-ros2cli = { channel = "robostack-jazzy" }
+ros-jazzy-ros2cli-common-extensions = { channel = "robostack-jazzy" }
+ros2-distro-mutex = { version = ">=0.7", channel = "robostack-jazzy" } # IMPORTANT! change ver if needed
+
+# ros 2 build packages (for ament, cmake, and colcon)
+ros-jazzy-ament-cmake-auto = { channel = "robostack-jazzy" }
+ros-jazzy-ament-cmake-clang-format = { channel = "robostack-jazzy" }
+ros-jazzy-ament-cmake = { channel = "robostack-jazzy" }
+ros-jazzy-ament-cmake-core = { channel = "robostack-jazzy" }
+ros-jazzy-ament-cmake-pytest = { channel = "robostack-jazzy" }
+ros-jazzy-ament-lint-auto = { channel = "robostack-jazzy" }
+ros-jazzy-ament-pep257 = { channel = "robostack-jazzy" }
+ros-jazzy-launch-pytest = { channel = "robostack-jazzy" }
+ros-jazzy-launch-testing-ament-cmake = { channel = "robostack-jazzy" }
+ros-jazzy-python-cmake-module = { channel = "robostack-jazzy" }
+ros-jazzy-rosidl-default-generators = { channel = "robostack-jazzy" }
+ros-jazzy-rosidl-default-runtime = { channel = "robostack-jazzy" }
+
+# ros 2 message pkgs
+ros-jazzy-action-msgs = { channel = "robostack-jazzy" }
+ros-jazzy-actionlib-msgs = { channel = "robostack-jazzy" }
+ros-jazzy-diagnostic-msgs = { channel = "robostack-jazzy" }
+ros-jazzy-geographic-msgs = { channel = "robostack-jazzy" }
+ros-jazzy-geometry-msgs = { channel = "robostack-jazzy" }
+ros-jazzy-rcl-interfaces = { channel = "robostack-jazzy" }
+ros-jazzy-sensor-msgs = { channel = "robostack-jazzy" }
+ros-jazzy-shape-msgs = { channel = "robostack-jazzy" }
+ros-jazzy-std-msgs = { channel = "robostack-jazzy" }
+ros-jazzy-std-srvs = { channel = "robostack-jazzy" }
+ros-jazzy-stereo-msgs = { channel = "robostack-jazzy" }
+ros-jazzy-trajectory-msgs = { channel = "robostack-jazzy" }
+
+# ros 2 launch file pkgs
+ros-jazzy-launch = { channel = "robostack-jazzy" }
+ros-jazzy-launch-ros = { channel = "robostack-jazzy" }
+ros-jazzy-launch-testing = { channel = "robostack-jazzy" }
+
+# ros 2 important runtime pkgs (like Nav2)
+ros-jazzy-pcl-ros = { channel = "robostack-jazzy" }
+ros-jazzy-rcl = { channel = "robostack-jazzy" }
+ros-jazzy-rclcpp = { channel = "robostack-jazzy" }
+ros-jazzy-tf-transformations = { channel = "robostack-jazzy" }
+ros-jazzy-tf2 = { channel = "robostack-jazzy" }
+ros-jazzy-tf2-ros = { channel = "robostack-jazzy" }
+ros-jazzy-vision-opencv = { channel = "robostack-jazzy" }
+
+# ros 2 debugging pkgs
+ros-jazzy-tf2-tools = { channel = "robostack-jazzy" }
+ros-jazzy-topic-tools = { channel = "robostack-jazzy" }
+
+# visualization and simulation
+ros-jazzy-rqt-console = { channel = "robostack-jazzy" }
+ros-jazzy-rqt-graph = { channel = "robostack-jazzy" }
+ros-jazzy-rqt-tf-tree = { channel = "robostack-jazzy" }
+ros-jazzy-rviz2 = { channel = "robostack-jazzy" }
+ros-jazzy-rviz-default-plugins = { channel = "robostack-jazzy" }
+
+# IMPORTANT STUFF: REQUIRED EXPLICITLY BY THE ORIGINAL LIDAR PACKAGE
+ros-jazzy-pcl-conversions = { channel = "robostack-jazzy" }
+pcl = { channel = "conda-forge" }
